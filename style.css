@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E6FFFD;
+}
+
+#headder,
+h2 {
+    text-align: center;
+    font-family: cursive
+}
+
+#todoTaskDescription {
+    overflow-y: auto;
+    resize: none;
+}
+
+#todoDescriptionDiv {
+    height: 200px;
+    overflow-y: auto;
+    resize: none;
+}
+
+#newTodoDiv {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+}
+
+#todoShowTasks {
+    display: flex;
+
+}
+
+.card {
+    border: 3px solid black;
+    height: 400px;
+    width: 250px;
+    border-radius: 20px;
+    margin-left: 20px;
+    text-align: center;
+    background-image: linear-gradient(#AEE2FF, #ACBCFF, #B799FF);
+}
+
+#newTaskButtons {
+    text-align: center;
+}
+
+.card:hover {
+    animation: coolAnimation 4s;
+}
+
+.card {
+    animation: popout 1s ease;
+    -webkit-animation: popout 1s ease;
+}
+
+@keyframes popout {
+    from {transform: scale(0)}
+    80% {transform: scale(1.2)}
+    to {transform: scale(1)}
+}
+
+@-webkit-keyframes popout {
+    from {-webkit-transform: scale(0)}
+    80% {-webkit-transform: scale(1.2)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes coolAnimation {
+    0% {transform: scale(1);}
+    25% {transform: scale(1.1);}
+    50% {transform: scale(1.1);}
+    75% {transform: scale(1.1);}
+    100% {transform: scale(1.1);}
+}
+
+
+.btn {
+    border-radius: 10px;
+    border-color: #B799FF;
+}
+
+.btn:hover {
+    background-color: #AEE2FF;
+    border-color: #A459D1;
+    color: #E6FFFD;
+}
+
+thead {
+    text-align: center;
+}
+
+
+@keyframes disapper {
+    0% {
+        opacity: 1;
+        transform: rotateX(90deg);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+}
